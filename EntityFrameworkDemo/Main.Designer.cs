@@ -73,7 +73,7 @@
             this.gbAddProduct.Size = new System.Drawing.Size(308, 212);
             this.gbAddProduct.TabIndex = 1;
             this.gbAddProduct.TabStop = false;
-            this.gbAddProduct.Text = "Add a Product";
+            this.gbAddProduct.Text = "Add a Products";
             // 
             // btnAdd
             // 
@@ -146,7 +146,7 @@
             this.gbUpdateProduct.Size = new System.Drawing.Size(308, 212);
             this.gbUpdateProduct.TabIndex = 6;
             this.gbUpdateProduct.TabStop = false;
-            this.gbUpdateProduct.Text = "Update a Product";
+            this.gbUpdateProduct.Text = "Update a Products";
             // 
             // btnUpdate
             // 
