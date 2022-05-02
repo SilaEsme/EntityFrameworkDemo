@@ -44,7 +44,7 @@
             this.txtNameUpdate = new System.Windows.Forms.TextBox();
             this.lblStockUpdate = new System.Windows.Forms.Label();
             this.lblPriceUpdate = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblNameUpdate = new System.Windows.Forms.Label();
             this.btnRemove = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProducts)).BeginInit();
             this.gbAddProduct.SuspendLayout();
@@ -54,10 +54,11 @@
             // dgwProducts
             // 
             this.dgwProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwProducts.Location = new System.Drawing.Point(41, 12);
+            this.dgwProducts.Location = new System.Drawing.Point(195, 12);
             this.dgwProducts.Name = "dgwProducts";
-            this.dgwProducts.Size = new System.Drawing.Size(848, 249);
+            this.dgwProducts.Size = new System.Drawing.Size(567, 249);
             this.dgwProducts.TabIndex = 0;
+            this.dgwProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwProducts_CellClick);
             // 
             // gbAddProduct
             // 
@@ -83,6 +84,7 @@
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtStockAdd
             // 
@@ -140,7 +142,7 @@
             this.gbUpdateProduct.Controls.Add(this.txtNameUpdate);
             this.gbUpdateProduct.Controls.Add(this.lblStockUpdate);
             this.gbUpdateProduct.Controls.Add(this.lblPriceUpdate);
-            this.gbUpdateProduct.Controls.Add(this.label3);
+            this.gbUpdateProduct.Controls.Add(this.lblNameUpdate);
             this.gbUpdateProduct.Location = new System.Drawing.Point(535, 279);
             this.gbUpdateProduct.Name = "gbUpdateProduct";
             this.gbUpdateProduct.Size = new System.Drawing.Size(308, 212);
@@ -156,6 +158,7 @@
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtStockUpdate
             // 
@@ -196,14 +199,14 @@
             this.lblPriceUpdate.TabIndex = 1;
             this.lblPriceUpdate.Text = "Unit Price";
             // 
-            // label3
+            // lblNameUpdate
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 51);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Name";
+            this.lblNameUpdate.AutoSize = true;
+            this.lblNameUpdate.Location = new System.Drawing.Point(38, 51);
+            this.lblNameUpdate.Name = "lblNameUpdate";
+            this.lblNameUpdate.Size = new System.Drawing.Size(35, 13);
+            this.lblNameUpdate.TabIndex = 0;
+            this.lblNameUpdate.Text = "Name";
             // 
             // btnRemove
             // 
@@ -213,6 +216,7 @@
             this.btnRemove.TabIndex = 7;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // Main
             // 
@@ -224,7 +228,7 @@
             this.Controls.Add(this.gbAddProduct);
             this.Controls.Add(this.dgwProducts);
             this.Name = "Main";
-            this.Text = "Form1";
+            this.Text = "EntityDemo";
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwProducts)).EndInit();
             this.gbAddProduct.ResumeLayout(false);
@@ -251,7 +255,7 @@
         private System.Windows.Forms.TextBox txtNameUpdate;
         private System.Windows.Forms.Label lblStockUpdate;
         private System.Windows.Forms.Label lblPriceUpdate;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNameUpdate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnRemove;

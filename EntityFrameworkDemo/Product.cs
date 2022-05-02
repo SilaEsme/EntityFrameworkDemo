@@ -1,8 +1,6 @@
-﻿using System.Data.SqlTypes;
-
-namespace EntityFrameworkDemo
+﻿namespace EntityFrameworkDemo
 {
-    public class Product
+    internal class Product
     {
         public int Id { get; set; }
         public string Name { get; set; }
