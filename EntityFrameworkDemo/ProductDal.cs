@@ -14,9 +14,17 @@ namespace EntityFrameworkDemo
             }
         }
 
-        public void Add(Product product)
+        public List<Product> GetByName(string key)
         {
             using (TradeContext context=new TradeContext())
+            {
+                return context.Products.Where(x => x.Name.Contains(key)).ToList();      // Database filtering
+            }
+        }
+
+        public void Add(Product product)
+        {
+            using (TradeContext context = new TradeContext()) 
             {
                 //context.Products.Add(product);
                 var entity = context.Entry(product);

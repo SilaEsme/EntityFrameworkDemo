@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace EntityFrameworkDemo
@@ -19,6 +20,12 @@ namespace EntityFrameworkDemo
         private void LoadProducts()
         {
             dgwProducts.DataSource = _productDal.GetAllList();
+        }
+
+        private void SearchProducts(string key)
+        {
+            //dgwProducts.DataSource =_productDal.GetAllList().Where(x => x.Name.Contains(key)).ToList();     // List filtering
+            dgwProducts.DataSource = _productDal.GetByName(key);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -61,6 +68,11 @@ namespace EntityFrameworkDemo
             });
             LoadProducts();
             MessageBox.Show("Deleted!");
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            SearchProducts(txtSearch.Text);
         }
     }
 }

@@ -46,6 +46,8 @@
             this.lblPriceUpdate = new System.Windows.Forms.Label();
             this.lblNameUpdate = new System.Windows.Forms.Label();
             this.btnRemove = new System.Windows.Forms.Button();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProducts)).BeginInit();
             this.gbAddProduct.SuspendLayout();
             this.gbUpdateProduct.SuspendLayout();
@@ -54,9 +56,9 @@
             // dgwProducts
             // 
             this.dgwProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwProducts.Location = new System.Drawing.Point(195, 12);
+            this.dgwProducts.Location = new System.Drawing.Point(193, 45);
             this.dgwProducts.Name = "dgwProducts";
-            this.dgwProducts.Size = new System.Drawing.Size(567, 249);
+            this.dgwProducts.Size = new System.Drawing.Size(567, 216);
             this.dgwProducts.TabIndex = 0;
             this.dgwProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwProducts_CellClick);
             // 
@@ -69,7 +71,7 @@
             this.gbAddProduct.Controls.Add(this.lblStockAdd);
             this.gbAddProduct.Controls.Add(this.lblPriceAdd);
             this.gbAddProduct.Controls.Add(this.lblNameAdd);
-            this.gbAddProduct.Location = new System.Drawing.Point(86, 279);
+            this.gbAddProduct.Location = new System.Drawing.Point(98, 279);
             this.gbAddProduct.Name = "gbAddProduct";
             this.gbAddProduct.Size = new System.Drawing.Size(308, 212);
             this.gbAddProduct.TabIndex = 1;
@@ -143,7 +145,7 @@
             this.gbUpdateProduct.Controls.Add(this.lblStockUpdate);
             this.gbUpdateProduct.Controls.Add(this.lblPriceUpdate);
             this.gbUpdateProduct.Controls.Add(this.lblNameUpdate);
-            this.gbUpdateProduct.Location = new System.Drawing.Point(535, 279);
+            this.gbUpdateProduct.Location = new System.Drawing.Point(547, 279);
             this.gbUpdateProduct.Name = "gbUpdateProduct";
             this.gbUpdateProduct.Size = new System.Drawing.Size(308, 212);
             this.gbUpdateProduct.TabIndex = 6;
@@ -210,7 +212,7 @@
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(414, 453);
+            this.btnRemove.Location = new System.Drawing.Point(426, 453);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(103, 32);
             this.btnRemove.TabIndex = 7;
@@ -218,11 +220,30 @@
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(369, 20);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(41, 13);
+            this.lblSearch.TabIndex = 8;
+            this.lblSearch.Text = "Search";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(416, 17);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(167, 20);
+            this.txtSearch.TabIndex = 9;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 503);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.gbUpdateProduct);
             this.Controls.Add(this.gbAddProduct);
@@ -236,6 +257,7 @@
             this.gbUpdateProduct.ResumeLayout(false);
             this.gbUpdateProduct.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -259,6 +281,8 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }
 
